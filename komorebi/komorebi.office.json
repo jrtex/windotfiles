@@ -1,0 +1,92 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.json",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "mouse_follows_focus": true,
+  "default_workspace_padding": 5,
+  "default_container_padding": 5,
+  "border": true,
+  "border_colours": {
+    "single": "#458588",
+    "stack": "#98971a",
+    "monocle": "#b16286",
+    "unfocused": "#7c6f64",
+    "floating": "#d79921"
+  },
+  "border_width": 5,
+  "border_offset": -1,
+  "border_implementation": "Komorebi",
+  "display_index_preferences": {
+    "0": "DELA0B2-8&25681b31&0&UID257",
+    "1": "DELA0B2-8&25681b31&0&UID256",
+    "2": "GSM59F1-4&223e803e&0&UID4145"
+  },
+  "monitors": [
+    {
+      "workspaces": [
+        { "name": "I", "layout": "BSP" },
+        { "name": "II", "layout": "VerticalStack" },
+        { "name": "III", "layout": "VerticalStack" },
+        { "name": "IV", "layout": "VerticalStack" }
+      ]
+    },
+    {
+      "workspaces": [
+        { "name": "A", "layout": "BSP" },
+        { "name": "B", "layout": "VerticalStack" },
+        { "name": "C", "layout": "VerticalStack" },
+        { "name": "D", "layout": "VerticalStack" }
+      ]
+    },
+    {
+      "window_based_work_area_offset_limit": 1,
+      "window_based_work_area_offset": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "workspaces": [
+        { "name": "Zeta",  "layout": "Grid" },
+        { "name": "Theta", "layout": "Grid" },
+        { "name": "Iota",  "layout": "Grid" },
+        { "name": "Kappa", "layout": "Grid" }
+      ]
+    }
+  ],
+  "manage_rules": [
+    {
+      "kind": "Exe",
+      "id": "ConEmu64.exe"
+    },
+    {
+      "kind": "Title",
+      "id": "\\| Microsoft Teams",
+      "matching_strategy": "Regex"
+    }
+  ],
+  "ignore_rules": [
+    {
+      "kind": "Exe",
+      "id": "Zebar.exe",
+      "matching_rules": "Equals"
+    }
+  ],
+  "stackbar": {
+    "height": 25,
+    "label": "Process",
+    "mode": "OnStack",
+    "tabs": {
+      "width": 300,
+      "focused_text": "#98971a",
+      "unfocused_text": "#928374",
+      "background": "#282828"
+    }
+  },
+  "animation": {
+    "enabled": true,
+    "duration": 50,
+    "style": "EaseOutQuart"
+  }
+}

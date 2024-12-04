@@ -1,0 +1,81 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.yaml",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "focus_follows_mouse": "Windows",
+  "mouse_follows_focus": true,
+  "default_workspace_padding": 5,
+  "default_container_padding": 5,
+  "border": true,
+  "border_colours": {
+    "single": "#458588",
+    "stack": "#98971a",
+    "monocle": "#b16286",
+    "unfocused": "#7c6f64"
+  },
+  "border_width": 5,
+  "border_offset": -1,
+  "monitors": [
+    {
+      "workspaces": [
+        { "name": "I", "layout": "BSP" },
+        { "name": "II", "layout": "VerticalStack" },
+        { "name": "III", "layout": "HorizontalStack" },
+        { "name": "IV", "layout": "UltrawideVerticalStack" }
+      ]
+    },
+    {
+      "workspaces": [
+        { "name": "A", "layout": "BSP" },
+        { "name": "B", "layout": "VerticalStack" },
+        { "name": "C", "layout": "HorizontalStack" },
+        { "name": "D", "layout": "UltrawideVerticalStack" }
+      ]
+    },
+    {
+      "window_based_work_area_offset_limit": 1,
+      "window_based_work_area_offset": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "workspaces": [
+        { "name": "Zeta",  "layout": "UltrawideVerticalStack" },
+        { "name": "Theta", "layout": "UltrawideVerticalStack" },
+        { "name": "Iota",  "layout": "Grid" },
+        { "name": "Kappa", "layout": "Grid" }
+      ]
+    }
+  ],
+  "manage_rules": [
+    {
+      "kind": "Exe",
+      "id": "ConEmu64.exe"
+    },
+    {
+      "kind": "Title",
+      "id": "\\| Microsoft Teams",
+      "matching_strategy": "Regex"
+    }
+  ],
+  "float_rules": [
+    {
+      "kind": "Exe",
+      "id": "Zebar.exe",
+      "matching_rules": "Equals"
+    }
+  ],
+  "stackbar": {
+    "height": 25,
+    "label": "Process",
+    "mode": "OnStack",
+    "tabs": {
+      "width": 300,
+      "focused_text": "#98971a",
+      "unfocused_text": "#928374",
+      "background": "#282828"
+    }
+  }
+}

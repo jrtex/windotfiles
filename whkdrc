@@ -1,0 +1,108 @@
+.shell powershell
+
+# Keycodes for non alpha, 
+# OEM_COMMA : ,
+# OEM_PERIOD : .
+# OEM_1 : ;
+# OEM_2 : /
+# OEM_4 : [
+# OEM_6 : ]
+
+# ------------------------------------------------   Corne Configuration   ---------------------------------------------------
+#
+# Layer 6 (Right Thumb): Alt mask
+# ----------------------------------------------------------------------------------------------------------------------------
+# |         |         |         |tog fulls|tog float|         | |         |      Focus workspace (1, 2, 3 4)      |         |
+# |         |   Move Focus (Left, up, down, right)  |FocusNext| |         | Move Window (Left, up, down, right)   |         |
+# |         |         |         | Cycle Layout p/n  |         | |         |  BSP    | UWideStk| Vstack  | HStack  |         |
+#                               |         |         |         | |---------|         |         |
+#
+#
+# Layer 7 (Left + Right thumb): Alt-Shift mask
+# ----------------------------------------------------------------------------------------------------------------------------
+# |         |  Close  | Retile  | Minimize| Promote |         | |         |      Send to Worskpace (1, 2 ,3, 4)   |         |
+# |         | FocMon 0|         |         | FocMon 1|         | |         |  Stack Window (Left, Up, Down, Right) |         |  - 
+# |         | WhkdRst | KmrbRst | Flip X  | Flip Y  |         | |         |  CycleStack p/n   | Unstack |         |         |  - 
+#                               |         |         |---------| |---------|         |         |
+
+
+# Reload whkd configuration
+alt + shift + z         : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle
+alt + shift + x         : komorebic reload-configuration
+
+# Focus windows
+alt + a                 : komorebic focus left
+alt + r                 : komorebic focus down
+alt + s                 : komorebic focus up
+alt + t                 : komorebic focus right
+alt + g                 : komorebic cycle-focus next
+alt + shift + a         : komorebic cycle-workspace previous
+alt + shift + t         : komorebic cycle-workspace next
+
+alt + OEM_4             : komerebic cycle-focus previous
+alt + OEM_6             : komorebic cycle-focus next
+
+# Move windows
+alt + n                 : komorebic move left
+alt + e                 : komorebic move down
+alt + i                 : komorebic move up
+alt + o                 : komorebic move right
+
+# Manipulate windows
+alt + p                 : komorebic toggle-float
+alt + f                 : komorebic toggle-monocle
+alt + shift + q         : komorebic close
+alt + shift + w         : komorebic retile
+alt + shift + f         : komorebic minimize
+alt + shift + p         : komorebic promote
+
+# Cycle layouts:
+alt + c                 : komorebic cycle-layout next
+alt + d                 : komorebic cycle-layout
+alt + shift + c         : komorebic flip-layout horizontal
+alt + shift + d         : komorebic flip-layout vertical
+
+# Set layout
+alt + h                 : komorebic change-layout bsp
+alt + OEM_COMMA         : komorebic change-layout ultrawide-vertical-stack
+alt + OEM_PERIOD        : komorebic change-layout vertical-stack
+alt + OEM_2             : komorebic change-layout horizontal-stack
+
+# Workspaces
+alt + l                 : komorebic focus-workspace 0
+alt + u                 : komorebic focus-workspace 1
+alt + y                 : komorebic focus-workspace 2
+alt + OEM_1             : komorebic focus-workspace 3
+alt + j                 : komorebic focus-workspace 4
+
+alt + OEM_MINUS         : komorebic cycle-workspace previous
+alt + OEM_PLUS          : komorebic cycle-workspace next
+
+# Send to Workspace
+alt + shift + l         : komorebic send-to-workspace 0
+alt + shift + u         : komorebic send-to-workspace 1
+alt + shift + y         : komorebic send-to-workspace 2
+alt + shift + OEM_1     : komorebic send-to-workspace 3
+alt + shift + j         : komorebic send-to-workspace 4
+
+
+# Stack windows
+alt + shift + n         : komorebic stack left
+alt + shift + e         : komorebic stack down
+alt + shift + i         : komorebic stack up
+alt + shift + o         : komorebic stack right
+alt + shift + h          : komorebic cycle-stack next
+alt + shift + OEM_COMMA  : komorebic cycle-stack previous
+alt + shift + OEM_PERIOD : komorebic unstack
+
+# Resize
+alt + shift + m          : komorebic resize-axis horizontal increase
+alt + shift + k          : komorebic resize-axis horizontal decrease
+alt + shift + g          : komorebic resize-axis vertical increase
+alt + shift + v          : komorebic resize-axis vertical decrease
+
+
+# App shortcuts - these require shell to be pwsh / powershell
+# The apps will be focused if open, or launched if not open
+# alt + f                 : if ($wshell.AppActivate('Firefox') -eq $False) { start firefox }
+# alt + b                 : if ($wshell.AppActivate('Chrome') -eq $False) { start chrome }
