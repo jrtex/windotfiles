@@ -1,6 +1,6 @@
 
 param(
-  [String] $config = "C:\Users\jordanTexier\.config\komorebi\komorebi.work.json",
+  [String] $config = "$env:USERPROFILE\.config\komorebi\komorebi.work.json",
   [String] $place = "",
   [Switch] $Kill,
   [Switch] $Restart,
@@ -10,13 +10,15 @@ param(
 
 switch ($place) {
   work {
-    $config = "C:\Users\jordanTexier\.config\komorebi\komorebi.work.json"
+    $config = "$env:USERPROFILE\.config\komorebi\komorebi.work.json"
   } office {
-    $config = "C:\Users\jordanTexier\.config\komorebi\komorebi.office.json"
+    $config = "$env:USERPROFILE\.config\komorebi\komorebi.office.json"
   } home {
-    $config = "C:\Users\jordanTexier\.config\komorebi\komorebi.home.json"
+    $config = "$env:USERPROFILE\.config\komorebi\komorebi.home.json"
+  } laptop {
+    $config = "$env:USERPROFILE\.config\komorebi\komorebi.laptop.json"
   } default {
-    $config = "C:\Users\jordanTexier\.config\komorebi\komorebi.json"
+    $config = "$env:USERPROFILE\.config\komorebi\komorebi.json"
   } 
 }
 
