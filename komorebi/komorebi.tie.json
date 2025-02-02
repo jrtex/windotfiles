@@ -23,7 +23,9 @@
     "2": "DELA0A4-5&2bf28931&0&UID4353"
   },
   "bar_configurations": [
-    "$Env:USERPROFILE/.config/komorebi/komorebi.bar.4k.json"
+    "$Env:USERPROFILE/.config/komorebi/komorebi.bar.tie_left.json",
+    "$Env:USERPROFILE/.config/komorebi/komorebi.bar.4k.json",
+    "$Env:USERPROFILE/.config/komorebi/komorebi.bar.tie_right.json"
   ],
   "monitors": [
     {
@@ -44,10 +46,10 @@
     {
       "window_based_work_area_offset_limit": 1,
       "window_based_work_area_offset": {
-        "left": 200,
-        "top": 100,
-        "right": 400,
-        "bottom": 200
+        "left": 325,
+        "top": 180,
+        "right": 650,
+        "bottom": 360
       },
       "workspaces": [
         { "name": "Alpha", "layout": "Grid" },
@@ -60,9 +62,9 @@
       "window_based_work_area_offset_limit": 1,
       "window_based_work_area_offset": {
         "left": 0,
-        "top": 0,
+        "top": 30,
         "right": 0,
-        "bottom": 0
+        "bottom": 60
       },
       "workspaces": [
         { "name": "Zeta",  "layout": "Rows" },
