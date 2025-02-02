@@ -1,28 +1,30 @@
 
 param(
-  [String] $config = "$env:USERPROFILE\.config\komorebi\komorebi.work.json",
-  [String] $place = "",
+  [String] $configfile = "$env:USERPROFILE\.config\komorebi\komorebi.work.json",
+  [String] $config = "",
   [Switch] $Kill,
   [Switch] $Restart,
   [Switch] $bar 
 )
 
 
-switch ($place) {
+switch ($config) {
   work {
-    $config = "$env:USERPROFILE\.config\komorebi\komorebi.work.json"
+    $configfile = "$env:USERPROFILE\.config\komorebi\komorebi.work.json"
   } office {
-    $config = "$env:USERPROFILE\.config\komorebi\komorebi.office.json"
+    $configfile = "$env:USERPROFILE\.config\komorebi\komorebi.office.json"
   } home {
-    $config = "$env:USERPROFILE\.config\komorebi\komorebi.home.json"
+    $configfile = "$env:USERPROFILE\.config\komorebi\komorebi.home.json"
+  } tie {
+    $configfile = "$env:USERPROFILE\.config\komorebi\komorebi.tie.json"
   } laptop {
-    $config = "$env:USERPROFILE\.config\komorebi\komorebi.laptop.json"
+    $configfile = "$env:USERPROFILE\.config\komorebi\komorebi.laptop.json"
   } default {
-    $config = "$env:USERPROFILE\.config\komorebi\komorebi.json"
+    $configfile = "$env:USERPROFILE\.config\komorebi\komorebi.json"
   } 
 }
 
-$Command = "komorebic start -c $config --whkd"
+$Command = "komorebic start -c $configfile --whkd"
 if ( $bar ) { $Command += " --bar";}
 
 
