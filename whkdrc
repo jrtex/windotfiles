@@ -101,6 +101,10 @@ alt + shift + k          : komorebic resize-axis horizontal decrease
 alt + shift + g          : komorebic resize-axis vertical increase
 alt + shift + v          : komorebic resize-axis vertical decrease
 
+# Resize Presets
+alt + ctrl + 1          : komorebic load-resize $Env:USERPROFILE/.config/komorebi/sizepresets/5050.json
+alt + ctrl + 2          : komorebic load-resize $Env:USERPROFILE/.config/komorebi/sizepresets/6633.json
+alt + ctrl + 3          : komorebic load-resize $Env:USERPROFILE/.config/komorebi/sizepresets/7525.json
 
 # App shortcuts - these require shell to be pwsh / powershell
 # The apps will be focused if open, or launched if not open
