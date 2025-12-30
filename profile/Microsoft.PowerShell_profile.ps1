@@ -1,9 +1,14 @@
 $env:Path += "$env:USERPROFILE\Scripts;"
 
+$env:EDITOR = 'nvim.exe'
+
 $_ZO_DATA_DIR = "$env:USERPROFILE\AppData\Local\"
 
-
 Set-Alias -Name vim -Value nvim
+
+function nt {
+  Start-Process powershell -ArgumentList "-NoLogo" -WorkingDirectory $PWD
+}
 
 function ListDir {
   [alias('ls')]

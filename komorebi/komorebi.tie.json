@@ -4,8 +4,8 @@
   "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Insert",
   "mouse_follows_focus": true,
-  "default_workspace_padding": 10,
-  "default_container_padding": 10,
+  "default_workspace_padding": 5,
+  "default_container_padding": 5,
   "border": true,
   "border_colours": {
     "single": "#458588",
@@ -18,9 +18,9 @@
   "border_offset": -1,
   "border_implementation": "Komorebi",
   "display_index_preferences": {
-    "0": "DELA0B2-4&38b6bd55&0&UID198147",
-    "1": "GSM77BD-5&2bf28931&0&UID4356",
-    "2": "DELA0A4-5&2bf28931&0&UID4353"
+    "0": "DELA0A4-7&1b958bf5&0&UID265",
+    "1": "GSM77BD-7&1b958bf5&0&UID260",
+    "2": "DELA0A4-7&1b958bf5&0&UID264"
   },
   "bar_configurations": [
     "$Env:USERPROFILE/.config/komorebi/komorebi.bar.tie_left.json",
@@ -37,10 +37,11 @@
         "bottom": 400
       },
       "workspaces": [
-        { "name": "I", "layout": "Rows" },
-        { "name": "II", "layout": "Rows" },
-        { "name": "III", "layout": "Rows" },
-        { "name": "IV", "layout": "Rows" }
+        { "name": "中", "layout": "Rows" },
+        { "name": "东", "layout": "Rows" },
+        { "name": "西", "layout": "Rows" },
+        { "name": "北", "layout": "Rows" },
+        { "name": "南", "layout": "Rows" }
       ]
     },
     {
@@ -52,25 +53,27 @@
         "bottom": 360
       },
       "workspaces": [
-        { "name": "Alpha", "layout": "Grid" },
-        { "name": "Beta", "layout": "Grid" },
-        { "name": "Gamma", "layout": "Grid" },
-        { "name": "Delta", "layout": "Grid" }
+        { "name": "一", "layout": "Grid" },
+        { "name": "二", "layout": "Grid" },
+        { "name": "三", "layout": "Grid" },
+        { "name": "四", "layout": "Grid" },
+        { "name": "五", "layout": "Grid" }
       ]
     },
     {
       "window_based_work_area_offset_limit": 1,
       "window_based_work_area_offset": {
         "left": 0,
-        "top": 30,
+        "top": 200,
         "right": 0,
-        "bottom": 60
+        "bottom": 400
       },
       "workspaces": [
-        { "name": "Zeta",  "layout": "Rows" },
-        { "name": "Theta", "layout": "Rows" },
-        { "name": "Iota",  "layout": "Rows" },
-        { "name": "Kappa", "layout": "Rows" }
+        { "name": "土", "layout": "Rows" },
+        { "name": "火", "layout": "Rows" },
+        { "name": "水", "layout": "Rows" },
+        { "name": "木", "layout": "Rows" },
+        { "name": "金", "layout": "Rows" }
       ]
     }
   ],
@@ -95,7 +98,7 @@
   "stackbar": {
     "height": 25,
     "label": "Process",
-    "mode": "OnStack",
+    "mode": "Never",
     "tabs": {
       "width": 300,
       "focused_text": "#98971a",
