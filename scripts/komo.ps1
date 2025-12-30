@@ -4,9 +4,11 @@ param(
   [String] $config = "",
   [Switch] $Kill,
   [Switch] $Restart,
-  [Switch] $bar 
+  [Switch] $bar,
+  [Switch] $masir
 )
 
+if ( $config = "") { $config = "tie" }
 
 switch ($config) {
   work {
@@ -20,15 +22,21 @@ switch ($config) {
   } laptop {
     $configfile = "$env:USERPROFILE\.config\komorebi\komorebi.laptop.json"
   } default {
-    $configfile = "$env:USERPROFILE\.config\komorebi\komorebi.json"
+    $bar = $true
+    $masir = $true
+    $configfile = "$env:USERPROFILE\.config\komorebi\komorebi.tie.json"
   } 
 }
 
 $Command = "komorebic start -c $configfile --whkd"
 if ( $bar ) { $Command += " --bar";}
+if ( $masir ) { $Command += " --masir";}
 
 
 if( $Kill -or $Restart){
+  Invoke-Expression -Command "Stop-Process -Name komorebi-bar"
+  Invoke-Expression -Command "Stop-Process -Name masir"
+  Invoke-Expression -Command "Stop-Process -Name whkd"
   Invoke-Expression -Command "komorebic stop"
 }
 
